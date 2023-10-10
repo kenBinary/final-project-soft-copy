@@ -1,0 +1,341 @@
+.hide {
+  display: none !important;
+}
+
+.tenant-management {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+  height: 92%;
+  position: relative;
+}
+.tenant-management > .pop-up-container {
+  z-index: 9999;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(238, 238, 238, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+}
+.tenant-management > .pop-up-container > .add-necessity {
+  width: 26% !important;
+  height: 33% !important;
+}
+.tenant-management > .pop-up-container > .pop-up {
+  background-color: #393e46;
+  border: 1px solid #393e46;
+  row-gap: 1rem;
+  width: 26%;
+  aspect-ratio: 1/1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.tenant-management > .pop-up-container > .pop-up > * {
+  flex: 1;
+  border-radius: 0.3rem;
+}
+.tenant-management > .pop-up-container > .pop-up > div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tenant-management > .pop-up-container > .pop-up > div:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  column-gap: 0.3rem;
+}
+.tenant-management > .pop-up-container > .pop-up > div:nth-of-type(2) > label {
+  user-select: none;
+}
+.tenant-management > .pop-up-container > .pop-up > div:nth-of-type(2) > input {
+  height: 20px;
+  aspect-ratio: 1/1;
+}
+.tenant-management > .pop-up-container > .pop-up > div:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+}
+.tenant-management > .pop-up-container > .pop-up > div:nth-of-type(3) > button {
+  width: 25%;
+}
+.tenant-management > aside {
+  padding: 0.5rem;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 2px solid #00adb5;
+  padding: 0.3rem;
+  color: #393e46;
+}
+.tenant-management > aside > .tenant-list {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.1rem;
+}
+.tenant-management > aside > .tenant-list > h3 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #00adb5;
+}
+.tenant-management > aside > .tenant-list .tenant-record {
+  border-bottom: none !important;
+  box-sizing: border-box;
+}
+.tenant-management > aside > .tenant-list .tenant-record > div {
+  font-size: 1.3rem;
+  pointer-events: none;
+}
+.tenant-management > aside > .tenant-list .tenant-record:hover {
+  background-color: #eeeeee;
+}
+.tenant-management > aside > .tenant-list .tenant-record > button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  overflow: hidden;
+  background: #00adb5;
+  color: #eeeeee;
+}
+.tenant-management > aside > .tenant-list .tenant-record > button > span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  pointer-events: none;
+}
+.tenant-management > aside > .tenant-list .tenant-record > button:hover span {
+  color: #393e46;
+}
+.tenant-management > aside > .tenant-list .tenant-record > button::before,
+.tenant-management > aside > .tenant-list .tenant-record > button ::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.tenant-management > aside > .tenant-list .tenant-record > button::before {
+  content: "";
+  background: #393e46;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.tenant-management > aside > .tenant-list .tenant-record > button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+.tenant-management > aside > .tenant-list > div {
+  padding: 0.2rem;
+  border-bottom: 1px solid #00adb5;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+.tenant-management > aside > .tenant-list > div > div {
+  width: 228px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.tenant-management > aside > .tenant-list > div > button {
+  width: 20%;
+}
+.tenant-management > aside > button {
+  flex-shrink: 0;
+  height: 35px;
+}
+.tenant-management > aside > button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  overflow: hidden;
+  background: #00adb5;
+  color: #eeeeee;
+}
+.tenant-management > aside > button > span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  pointer-events: none;
+}
+.tenant-management > aside > button:hover span {
+  color: #393e46;
+}
+.tenant-management > aside > button::before,
+.tenant-management > aside > button ::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.tenant-management > aside > button::before {
+  content: "";
+  background: #393e46;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.tenant-management > aside > button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+.tenant-management > .tenant-info {
+  padding: 0.5rem;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 2px solid #00adb5;
+  color: #393e46;
+}
+.tenant-management > .tenant-info > img {
+  height: 180px;
+  aspect-ratio: 1/1;
+}
+.tenant-management > .tenant-info > .tenant-details {
+  flex-grow: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.5rem;
+}
+.tenant-management > .tenant-info > .tenant-details > h3 {
+  grid-column: 1/3;
+  font-size: 1.3rem;
+}
+.tenant-management > .tenant-info > .tenant-details > div {
+  font-size: 1.1rem;
+  border-right: 2px solid #00adb5;
+  cursor: default;
+}
+.tenant-management > .tenant-extra-info {
+  padding: 0.5rem;
+  height: 100%;
+  overflow-y: hidden;
+}
+.tenant-management > .tenant-extra-info > .table-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  column-gap: 1rem;
+}
+.tenant-management > .tenant-extra-info > .table-selector > select {
+  padding: 0.3rem;
+  outline: none;
+  border: 2px solid #393e46;
+  border-radius: 5px;
+}
+.tenant-management > .tenant-extra-info > .table-selector > button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  overflow: hidden;
+  background: #00adb5;
+  color: #eeeeee;
+}
+.tenant-management > .tenant-extra-info > .table-selector > button > span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  pointer-events: none;
+}
+.tenant-management > .tenant-extra-info > .table-selector > button:hover span {
+  color: #393e46;
+}
+.tenant-management > .tenant-extra-info > .table-selector > button::before,
+.tenant-management > .tenant-extra-info > .table-selector > button ::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.tenant-management > .tenant-extra-info > .table-selector > button::before {
+  content: "";
+  background: #393e46;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.tenant-management > .tenant-extra-info > .table-selector > button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+.tenant-management > .tenant-extra-info > table {
+  display: block;
+  overflow-y: hidden;
+  height: 100%;
+}
+.tenant-management > .tenant-extra-info > table > tbody,
+.tenant-management > .tenant-extra-info > table thead {
+  display: block;
+  overflow-y: auto;
+}
+.tenant-management > .tenant-extra-info > table > tbody > tr,
+.tenant-management > .tenant-extra-info > table thead > tr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+.tenant-management > .tenant-extra-info > table > tbody > tr > *,
+.tenant-management > .tenant-extra-info > table thead > tr > * {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.tenant-management > .tenant-extra-info > table > tbody > tr > td,
+.tenant-management > .tenant-extra-info > table thead > tr > td {
+  padding: 0.5rem;
+  background-color: #eeeeee;
+}
+.tenant-management > .tenant-extra-info > table > thead {
+  background-color: #00adb5;
+  padding: 0.5rem;
+  color: #eeeeee;
+  font-size: 1.1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.tenant-management > .tenant-extra-info > table > tbody {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/*# sourceMappingURL=tenant-management-stylecss.map */
